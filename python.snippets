@@ -1,0 +1,30 @@
+snippet func
+def $1($2):
+	$0
+endsnippet
+
+snippet match
+match $1:
+	case $2:
+		$0
+endsnippet 
+
+snippet case_
+match $1:
+	case $2:
+		$3
+	$4
+	case _:
+		case $0
+endsnippet 
+
+snippet main
+if __name__ == "__main__":
+	$0
+endsnippet
+
+snippet class
+class $1:
+	def __init__(self$2):
+		$0
+endsnippet
