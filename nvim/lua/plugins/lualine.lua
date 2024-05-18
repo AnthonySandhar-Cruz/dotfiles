@@ -4,7 +4,8 @@ return {
 		require('lualine').setup({
 			options = {
 				-- theme = 'dracula'
-				theme = 'delta'
+				--theme = 'delta'
+				theme = 'gruvbox'
 			}
 		})
 	end

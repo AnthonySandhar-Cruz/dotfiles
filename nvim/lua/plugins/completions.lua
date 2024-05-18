@@ -2,26 +2,38 @@ return {
 	{
 		"hrsh7th/cmp-nvim-lsp"
 	},
+	-- {
+	--	"github/copilot.vim",
+	--},
+	--{
+	--	"L3MON4D3/LuaSnip",
+	--	dependencies = {
+	--		"saadparwaiz1/cmp_luasnip",
+	--		"rafamadriz/friendly-snippets",
+	--	},
+	--},
 	{
-		"L3MON4D3/LuaSnip",
-		dependencies = {
-			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets",
-		},
+		'sirver/ultisnips',
+		config = function ()
+			vim.g.UltiSnipsExpandTrigger = "<tab>"
+			vim.g.UltiSnipsSnippetDirectories = {"tony_snips"}
+			vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
+			vim.g.UltiSnipsJumpBackwardTrigger = "<s-tab>"
+		end
 	},
 	{
 	"hrsh7th/nvim-cmp",
 	config = function()
 		local cmp = require'cmp'
-		require("luasnip.loaders.from_vscode").lazy_load()
-		require("luasnip.loaders.from_snipmate").lazy_load()
+		--require("luasnip.loaders.from_vscode").lazy_load()
+		--require("luasnip.loaders.from_snipmate").lazy_load()
 		cmp.setup({
 			snippet = {
 			-- REQUIRED - you must specify a snippet engine
 			expand = function(args)
 				-- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-				require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-				-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+				--require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+				vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 			end,
 			},
 			window = {
@@ -38,8 +50,8 @@ return {
 			sources = cmp.config.sources({
 				-- { name = 'nvim_lsp' },
 				-- { name = 'vsnip' }, -- For vsnip users.
-				{ name = 'luasnip' }, -- For luasnip users.
-				-- { name = 'ultisnips' }, -- For ultisnips users.
+				--{ name = 'luasnip' }, -- For luasnip users.
+				{ name = 'ultisnips' }, -- For ultisnips users.
 				-- { name = 'snippy' }, -- For snippy users.
 				}, {
 				{ name = 'buffer' },
