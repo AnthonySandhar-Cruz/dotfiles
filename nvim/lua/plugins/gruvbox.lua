@@ -6,7 +6,7 @@ return {
 			gv.setup {
 			contrast = "hard",
 			palette_overrides = {
-				dark0_hard = "#000000",
+				dark0_hard = "#262626",
 			},
 			}
         vim.cmd.colorscheme 'gruvbox'
