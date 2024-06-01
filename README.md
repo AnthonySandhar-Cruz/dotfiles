@@ -1,1 +1,1 @@
-My configuration is based on the following two GitHub repos: [abdullaev/dotfiles](https://github.com/abdullaev/dotfiles) and [typecraft-dev/dotfiles](https://github.com/typecraft-dev/dotfiles).
+My configuration is based on the following GitHub repos: [abdullaev/dotfiles](https://github.com/abdullaev/dotfiles) (zathura, polybar), [typecraft-dev/dotfiles](https://github.com/typecraft-dev/dotfiles) (i3, polybar), and [abxh/dotfiles](https://github.com/abxh/dotfiles/) (rofi).
