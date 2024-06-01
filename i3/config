@@ -16,14 +16,14 @@
 
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
 
 # set $mod Mod4
 
 set $mod Mod1
 
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale ~/Pictures/castle1.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/bg.jpg
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
@@ -270,10 +270,12 @@ set $surface0 #313244
 set $base #1e1e2e
 set $mantle #181825
 set $crust #11111b
+set $neutralyellow #ebdbb2
 
 # target title bg text indicator border
 
-client.focused $mantle $mauve $mantle $rosewater $mauve
+#client.focused $mauve $mauve $mantle $rosewater $mauve
+client.focused $neutralyellow $neutralyellow $neutralyellow $neutralyellow $neutralyellow
 client.focused_inactive $overlay0 $base $text $rosewater $overlay0
 client.unfocused $overlay0 $base $text $rosewater $overlay0
 client.urgent $peach $base $peach $overlay0 $peach
